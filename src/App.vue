@@ -1,18 +1,29 @@
 <template>
 
   <div id="app">
-    <input type="text" />
+    <navbar :nav-items="navItems"></navbar>
   </div>
 
 </template>
 
 <script>
 
+import navbar from './components/layout/navbar.vue'
+
 export default {
-  name: 'app',
+  components: {
+    navbar
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      navItems: [
+        {
+          display: 'Properties'
+        },
+        {
+          display: 'Contacts'
+        }
+      ]
     }
   }
 }

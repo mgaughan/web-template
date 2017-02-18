@@ -4,12 +4,13 @@
 		ecmaVersion: 6,
 		sourceType: 'module'
 	},
-	extends: ['vue'],
+	extends: ['airbnb', 'vue'],
 	plugins: [
 		'vue',
 		'html'
 	],
   rules: {
-    'eol-last': 1
+    'eol-last': 0,
+    'indent': 1
   }
 }
