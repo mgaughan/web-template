@@ -1,7 +1,9 @@
 <template>
 
   <div id="app">
-    <navbar :nav-items="navItems"></navbar>
+    <navbar :items="items"></navbar>
+    <banner></banner>
+    <router-view></router-view>
   </div>
 
 </template>
@@ -9,19 +11,29 @@
 <script>
 
 import navbar from './components/layout/navbar.vue'
+import banner from './components/layout/banner.vue'
+import home from './components/layout/home.vue'
 
 export default {
   components: {
-    navbar
+    navbar,
+    banner,
+    home
   },
   data () {
     return {
-      navItems: [
+      items: [
         {
-          display: 'Properties'
+          display: 'Home',
+          route: 'home'
         },
         {
-          display: 'Contacts'
+          display: 'Properties',
+          route: 'properties'
+        },
+        {
+          display: 'Contacts',
+          route: 'contacts'
         }
       ]
     }

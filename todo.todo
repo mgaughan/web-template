@@ -1,9 +1,9 @@
 Architecture:
   ☐ Use Sass with Bootstrap
+  ☐ Use extractTextPlugin in webpack
 
 General:
   ☐ Accessibility
     ☐ What is '.d-flex justify-content-between hidden-lg-up' in bootstraps header?
 
 Layout:
-   @created(17-02-18 01:18)
