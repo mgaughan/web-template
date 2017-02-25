@@ -1,6 +1,6 @@
 import home from '../components/layout/home.vue'
+import properties from '../components/properties/properties.vue'
 
-const properties = {}
 const contacts = {}
 
 export default {
@@ -20,6 +20,5 @@ export default {
       name: 'contacts',
       component: contacts
     }
-
   ]
 }
