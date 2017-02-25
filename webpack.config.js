@@ -5,7 +5,7 @@ const webpack = require('webpack')
 module.exports = {
   entry: './src/app.entry.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../api-template/src/assets'),
     publicPath: '/dist/',
     filename: 'build.js'
   },

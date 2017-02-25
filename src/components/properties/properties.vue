@@ -1,9 +1,11 @@
 <template>
   <div class="container">
-  properties
+  props
   </div>
 </template>
 
 <script>
-export default { }
+export default {
+
+}
 </script>
