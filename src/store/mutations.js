@@ -1,7 +1,9 @@
-import types from './mutation-types'
+import * as types from './mutation-types'
 
-export default {  
+const mutations = {
   [types.SET_PROPERTIES] (state, properties) {
-    state.properties = properties
+    state.properties3 = properties
   }
 }
+
+export default mutations
