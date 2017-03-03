@@ -1,3 +1,3 @@
 export default {
-  properties3: []
+  properties: []
 }

@@ -2,7 +2,7 @@
 
   <div class="banner">
     <div class="container">
-      <h1>Properties On Demand</h1>
+      <h1>Cloud 9</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
       </p>

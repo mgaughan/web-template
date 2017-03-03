@@ -12,6 +12,7 @@
   rules: {
     'eol-last': 0,
     'indent': 1,
-    'no-trailing-spaces': 1
+    'no-trailing-spaces': 1,
+    'padded-blocks': 0
   }
 }
