@@ -1,5 +1,5 @@
 import home from '../components/layout/home.vue'
-import properties from '../components/properties/properties.vue'
+import investments from '../components/investments/investments.vue'
 
 const contacts = {}
 
@@ -11,9 +11,9 @@ export default {
       component: home
     },
     {
-      path: '/properties',
-      name: 'properties',
-      component: properties
+      path: '/investments',
+      name: 'investments',
+      component: investments
     },
     {
       path: '/contacts',

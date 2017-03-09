@@ -28,8 +28,8 @@ export default {
           route: 'home'
         },
         {
-          display: 'Properties',
-          route: 'properties'
+          display: 'Investments',
+          route: 'investments'
         },
         {
           display: 'Contacts',

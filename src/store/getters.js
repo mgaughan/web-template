@@ -1,3 +1,3 @@
-export const properties = (state) => {
-  return state.properties
+export const investments = (state) => {
+  return state.investments
 }
