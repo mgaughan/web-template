@@ -7,7 +7,7 @@ export const getInvestments = ({ commit }) => {
   http.get('http://localhost:3000/investments')
     .then((response) => {
       if (response && response.data) {
-        commit(types.SET_PROPERTIES, response.data)
+        commit(types.SET_INVESTMENTS, response.data)
       }
     })
 }

@@ -12,12 +12,12 @@ import { mapGetters } from 'vuex'
 export default {
   beforeMount () {
     if (!this.$store.state.investments || !this.$store.state.investments.length) {
-      this.$store.dispatch('getInvestment')
+      this.$store.dispatch('getInvestments')
     }
   },
   computed: {
     ...mapGetters([
-      'investment'
+      'investments'
     ])
   }
 }
