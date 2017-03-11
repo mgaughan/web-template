@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-    <ul>
-      <li v-for="investment in investments" key="investment.id">{{ investment.name }}</li>
-    </ul>
-  </div>
+  <ul>
+    <li v-for="investment in investments" key="investment.id">{{ investment.name }}</li>
+  </ul>
 </template>
 
 <script>

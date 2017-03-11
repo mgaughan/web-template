@@ -8,6 +8,7 @@ import http from './plugins/http'
 
 Vue.use(Vuex)
 Vue.use(VueRouter)
+Vue.use(http)
 
 // eslint-disable-next-line no-new
 new Vue({

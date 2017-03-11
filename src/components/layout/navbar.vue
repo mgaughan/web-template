@@ -1,21 +1,29 @@
 <template>
-
-  <header class="navbar navbar-toggleable-md">
-    <nav class="container">
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li v-for="item in items" class="nav-item" @click="activeNav = item.display">
-            <a class="nav-item nav-link"
-              :href="item.href || 'javascript:void(0);'"
-              :class="{active: activeNav === item.display }"
-            >
-              <router-link :to="{ name: item.route }">{{ item.display }}</router-link>
-            </a>
-          </li>
-        </ul>
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <a class="navbar-brand" href="#">Cloud9</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li v-for="item in items" class="nav-item" @click="activeNav = item.display">
+          <router-link :to="{ name: item.route }"
+            class="nav-link"
+            href="#"
+            :class="{active: activeNav === item.display }"
+          >
+            {{ item.display }}
+            <span v-if="activeNav === item.display" class="sr-only">(current)</span>
+          </router-link>
+        </li>
+      </ul>
+      <div class="login my-2 my-lg-0">
+        <a href="#">Log In</a>
+        <router-link
+          :to="{ name: 'register' }"
+          class="btn btn-outline-success my-2 my-sm-0"
+          @click="activeNav = 'Register'"
+          href="#">Sign Up</router-link>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
 </template>
 
@@ -38,3 +46,11 @@ export default {
 }
 
 </script>
+
+<style lang="scss" scoped>
+.login {
+  .btn {
+    margin-left: 10px;
+  }
+}
+</style>

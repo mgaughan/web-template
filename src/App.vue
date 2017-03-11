@@ -2,8 +2,13 @@
 
   <div id="app">
     <navbar :items="items"></navbar>
-    <banner></banner>
-    <router-view></router-view>
+    <div class="container">
+      <router-view></router-view>
+      <hr>
+      <footer>
+        <p>© Company 2017</p>
+      </footer>
+    </div>
   </div>
 
 </template>
@@ -11,13 +16,11 @@
 <script>
 
 import navbar from './components/layout/navbar.vue'
-import banner from './components/layout/banner.vue'
 import home from './components/layout/home.vue'
 
 export default {
   components: {
     navbar,
-    banner,
     home
   },
   data () {
@@ -46,4 +49,7 @@ export default {
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
+body {
+  padding-top: 2rem;
+}
 </style>

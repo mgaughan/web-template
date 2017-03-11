@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
+    "bcrypt": "^1.0.2",
     "bootstrap": "^4.0.0-alpha.6",
     "bootstrap-vue": "^0.8.0",
     "vue-router": "^2.2.1",
