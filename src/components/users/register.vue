@@ -1,23 +1,23 @@
 <template>
   <form class="register" @submit.prevent="registerUser">
-    <h2 class="display-4">Registration</h2>
+    <h2>Registration</h2>
     <div class="alert alert-success" role="alert" v-if="success">
       <strong>Registration sent</strong> An email will be sent to you shortly for completing your registration.
     </div>
     <div class="alert alert-danger" role="alert" v-if="errorDetails">
-      <strong>Registration error</strong> {{ errorDetails }}
+      <strong>Error</strong> {{ errorDetails }}
     </div>
     <div class="form-group">
-      <label class="sr-only" for="username">Username</label>
-      <input class="form-control" v-model="username" placeholder="Username"></input>
+      <label for="email">Email Address</label>
+      <input class="form-control" v-model="email" name="email" placeholder="Enter email"></input>
     </div>
     <div class="form-group">
-      <label class="sr-only" for="email">Email Address</label>
-      <input class="form-control" v-model="email" placeholder="Email address"></input>
+      <label for="password">Password</label>
+      <input class="form-control" v-model="password" name="password" placeholder="Password" type="password"></input>
     </div>
     <div class="form-group">
-      <label class="sr-only" for="password">Password</label>
-      <input class="form-control" v-model="password" placeholder="Password"></input>
+      <label for="passwordConfirmation">Confirm Password</label>
+      <input class="form-control" v-model="passwordConfirmation" name="passwordConfirmation" placeholder="Confirm Password" type="password"></input>
     </div>
     <!-- TODO MG: captcha -->
     <button type="submit" class="btn btn-primary">Register</button>
@@ -32,9 +32,9 @@ const http = axios.axios
 export default {
   data () {
     return {
-      username: null,
       email: null,
       password: null,
+      passwordConfirmation: null,
       errorDetails: null,
       success: false
     }
@@ -47,16 +47,23 @@ export default {
 function registerUser() {
   const that = this;
 
+  if (this.password !== this.passwordConfirmation) {
+    this.success = false;
+    this.errorDetails = 'Password confirmation does not match.'
+    return;
+  }
+
   http.post('http://localhost:3000/register', {
-    username: this.username,
+    email: this.email,
     password: this.password
   })
+
   .then((response) => {
-    debugger
     if (response && response.data && response.data.success) {
       that.success = true
+      that.errorDetails = null;
     } else {
-      that.success = false;
+      that.success = false
       that.errorDetails = response && response.data
         ? response.data.errorMessage
         : 'There was a problem adding this user.'
