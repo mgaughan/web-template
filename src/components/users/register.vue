@@ -57,7 +57,6 @@ function registerUser() {
     email: this.email,
     password: this.password
   })
-
   .then((response) => {
     if (response && response.data && response.data.success) {
       that.success = true
