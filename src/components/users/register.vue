@@ -57,14 +57,14 @@ function registerUser() {
     email: this.email,
     password: this.password
   })
-  .then((response) => {
+  .then(response => {
     if (response && response.data && response.data.success) {
       that.success = true
       that.errorDetails = null;
     } else {
       that.success = false
       that.errorDetails = response && response.data
-        ? response.data.errorMessage
+        ? response.data.message
         : 'There was a problem adding this user.'
     }
   })
