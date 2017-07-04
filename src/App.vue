@@ -2,13 +2,12 @@
 
   <div id="app">
     <navbar :items="items"></navbar>
-    <div class="container">
+    <div class="container router-container">
       <router-view></router-view>
-      <hr>
-      <footer>
-        <p>© Company 2017</p>
-      </footer>
     </div>
+    <footer>
+      <p>© Company 2017</p>
+    </footer>
   </div>
 
 </template>
@@ -27,14 +26,6 @@ export default {
         {
           display: 'Home',
           route: 'home'
-        },
-        {
-          display: 'Investments',
-          route: 'investments'
-        },
-        {
-          display: 'Contacts',
-          route: 'contacts'
         }
       ]
     }
@@ -49,7 +40,7 @@ $fa-font-path: "~font-awesome/fonts";
 @import '../node_modules/font-awesome/scss/font-awesome.scss';
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-body {
-  padding-top: 2rem;
+.router-container {
+  margin-top: 55px;
 }
 </style>

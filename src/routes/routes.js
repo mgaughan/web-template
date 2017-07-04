@@ -15,16 +15,6 @@ export default {
       path: '/register',
       name: 'register',
       component: register
-    },
-    {
-      path: '/investments',
-      name: 'investments',
-      component: investments
-    },
-    {
-      path: '/contacts',
-      name: 'contacts',
-      component: contacts
     }
   ]
 }

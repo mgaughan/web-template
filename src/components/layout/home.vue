@@ -1,6 +1,5 @@
 <template>
-  <div>
-  <jumbotron></jumbotron>
+  <div class="playground">
     <date-picker></date-picker>
 <!--     <div class="row">
 
@@ -30,13 +29,17 @@
 </template>
 
 <script>
-import jumbotron from './jumbotron.vue'
 import datePicker from '../date-picker/date-picker.vue'
 
 export default {
   components: {
-    jumbotron,
     datePicker
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .playground {
+    padding: 25px 0;
+  }
+</style>
