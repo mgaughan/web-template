@@ -16,12 +16,10 @@
 <script>
 
 import navbar from './components/layout/navbar.vue'
-import home from './components/layout/home.vue'
 
 export default {
   components: {
-    navbar,
-    home
+    navbar
   },
   data () {
     return {
@@ -47,6 +45,8 @@ export default {
 
 <style lang="scss">
 
+$fa-font-path: "~font-awesome/fonts";
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 body {
