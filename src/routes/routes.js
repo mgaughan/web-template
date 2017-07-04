@@ -1,6 +1,5 @@
 import home from '../components/layout/home.vue'
 import register from '../components/users/register.vue'
-import investments from '../components/investments/investments.vue'
 
 const contacts = {}
 

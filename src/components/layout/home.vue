@@ -1,6 +1,6 @@
 <template>
   <div class="playground">
-    <date-picker></date-picker>
+    <datepicker></datepicker>
 <!--     <div class="row">
 
       <div class="col-md-4">
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import datePicker from '../date-picker/date-picker.vue'
+import datePicker from 'vue-strap/src/datepicker'
 
 export default {
   components: {
