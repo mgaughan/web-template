@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <a class="navbar-brand" href="#">Crowd9</a>
+    <a class="navbar-brand" href="#">Web Template</a>
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav mr-auto">
         <li v-for="item in items" class="nav-item" @click="activeNav = item.display">

@@ -1,14 +1,13 @@
 <template>
 
-  <div id="app">
+  <div class="app-container">
     <navbar :items="items"></navbar>
-    <div class="container">
+    <div class="router-container container">
       <router-view></router-view>
-      <hr>
-      <footer>
-        <p>© Company 2017</p>
-      </footer>
     </div>
+    <footer>
+      <p>© Company 2017</p>
+    </footer>
   </div>
 
 </template>
@@ -29,14 +28,6 @@ export default {
         {
           display: 'Home',
           route: 'home'
-        },
-        {
-          display: 'Investments',
-          route: 'investments'
-        },
-        {
-          display: 'Contacts',
-          route: 'contacts'
         }
       ]
     }
@@ -49,7 +40,8 @@ export default {
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
-body {
-  padding-top: 2rem;
+.router-container {
+  margin-top: 55px;
+  padding: 25px;
 }
 </style>
